@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Dijkstra Visualizer</a></li>
+            <li><a href="maze.html">Maze Game</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="toolbar">
+            <div class="tool-section">
+                <h3>Tools</h3>
+                <button id="addNode">Add Node</button>
+                <button id="addEdge">Add Edge</button>
+                <button id="deleteNode">Delete Node</button>
+                <button id="randomGraph">Random Graph</button>
+                <button id="findPath">Find Shortest Path</button>
+                <button id="clearAll">Clear All</button>
+            </div>
+        </div>
+        <div id="canvas-container">
+            <canvas id="graphCanvas"></canvas>
+        </div>
+    </div>
+    <script src="graph.js"></script>
+    <script src="dijkstra.js"></script>
+    <script>
+        // Initialize the graph when the page loads
+        window.addEventListener('load', () => {
+            console.log("Page loaded, initializing graph");
+            window.graph = new Graph();
+        });
+    </script>
+</body>
+</html>
